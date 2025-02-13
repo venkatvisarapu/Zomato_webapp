@@ -19,7 +19,7 @@ const LocationSearch = () => {
     setLoading(true);
 
     axios
-      .get(`http://localhost:5000/api/restaurants/nearby?lat=${latitude}&lng=${longitude}&range=${range}`)
+      .get(`https://zomatowebapp-production.up.railway.app/api/restaurants/nearby?lat=${latitude}&lng=${longitude}&range=${range}`)
       .then((res) => {
         setRestaurants(res.data);
         setLoading(false);
