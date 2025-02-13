@@ -10,7 +10,7 @@ const RestaurantList = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/restaurants?page=${page}`)
+    axios.get(`http://localhost:5000/api/restaurants?page=${page}`)
       .then(res => {
         setRestaurants(res.data.restaurants);
         setTotalPages(res.data.totalPages);
@@ -19,7 +19,7 @@ const RestaurantList = () => {
   }, [page]);
 
   const handleSearch = () => {
-    axios.get(`http://localhost:3000/api/restaurants/search?name=${searchQuery}`)
+    axios.get(`http://localhost:5000/api/restaurants/search?name=${searchQuery}`)
       .then(res => setRestaurants(res.data.restaurants))
       .catch(err => console.log(err));
   };
