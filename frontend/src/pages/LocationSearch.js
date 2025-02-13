@@ -19,7 +19,7 @@ const LocationSearch = () => {
     setLoading(true);
 
     axios
-      .get(`https://zomato-webapp-qtqr.onrender.com/api/restaurants/nearby?lat=${latitude}&lng=${longitude}&range=${range}`)
+      .get(`http://localhost:3000/api/restaurants/nearby?lat=${latitude}&lng=${longitude}&range=${range}`)
       .then((res) => {
         setRestaurants(res.data);
         setLoading(false);

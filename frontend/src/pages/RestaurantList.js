@@ -10,7 +10,7 @@ const RestaurantList = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    axios.get(`https://zomato-webapp-qtqr.onrender.com/api/restaurants?page=${page}`)
+    axios.get(`http://localhost:3000/api/restaurants?page=${page}`)
       .then(res => {
         setRestaurants(res.data.restaurants);
         setTotalPages(res.data.totalPages);

@@ -7,7 +7,7 @@ const RestaurantDetail = () => {
   const [restaurant, setRestaurant] = useState(null);
 
   useEffect(() => {
-    axios.get(`https://zomato-webapp-qtqr.onrender.com/api/restaurants/${id}`)
+    axios.get(`http://localhost:3000/api/restaurants/${id}`)
       .then(res => setRestaurant(res.data))
       .catch(err => console.log(err));
   }, [id]);
