@@ -22,7 +22,7 @@ const ImageSearch = () => {
     formData.append("foodImage", file);
 
     try {
-      const response = await axios.post("http://localhost:3000/api/image/search", formData, {
+      const response = await axios.post("https://zomato-webapp-qtqr.onrender.com/api/image/search", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
